@@ -1,9 +1,41 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Section from "Components/Section";
+import Loader from "Components/Loader";
+
+const Container = styled.div`
+  padding: 0px 10px;
+`;
 
 const TVPresenter = ({ topRated, popular, airingToday, loading, error }) =>
-  null;
+  loading ? (
+    <Loader></Loader>
+  ) : (
+    <Container>
+      {topRated && topRated.length > 0 && (
+        <Section title="Top Rated Show">
+          {topRated.map(show => (
+            <spna key={show.id}>{show.name}</spna>
+          ))}
+        </Section>
+      )}
+      {popular && popular.length > 0 && (
+        <Section title="Popular Show">
+          {popular.map(show => (
+            <spna key={show.id}>{show.name}</spna>
+          ))}
+        </Section>
+      )}
+      {airingToday && airingToday.length > 0 && (
+        <Section title="Airing Today Show">
+          {airingToday.map(show => (
+            <spna key={show.id}>{show.name}</spna>
+          ))}
+        </Section>
+      )}
+    </Container>
+  );
 
 TVPresenter.prototype = {
   topRated: PropTypes.array,
