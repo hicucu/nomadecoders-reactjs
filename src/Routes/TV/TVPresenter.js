@@ -16,21 +16,21 @@ const TVPresenter = ({ topRated, popular, airingToday, loading, error }) =>
       {topRated && topRated.length > 0 && (
         <Section title="Top Rated Show">
           {topRated.map(show => (
-            <spna key={show.id}>{show.name}</spna>
+            <span key={show.id}>{show.name}</span>
           ))}
         </Section>
       )}
       {popular && popular.length > 0 && (
         <Section title="Popular Show">
           {popular.map(show => (
-            <spna key={show.id}>{show.name}</spna>
+            <span key={show.id}>{show.name}</span>
           ))}
         </Section>
       )}
       {airingToday && airingToday.length > 0 && (
         <Section title="Airing Today Show">
           {airingToday.map(show => (
-            <spna key={show.id}>{show.name}</spna>
+            <span key={show.id}>{show.name}</span>
           ))}
         </Section>
       )}
