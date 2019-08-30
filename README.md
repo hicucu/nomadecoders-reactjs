@@ -11,7 +11,7 @@
 
 - [x] Now Playing(Movie)
 - [x] Upcoming (Movie)
-- [x] Top Tated (TV, Movie)
+- [x] Top Rated (TV, Movie)
 - [x] Popular (TV, Movie)
 - [x] Airing Today (Tv)
 - [x] TV Show Detail
